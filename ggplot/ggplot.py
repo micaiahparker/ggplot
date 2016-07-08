@@ -17,6 +17,7 @@ from .themes import theme_gray
 from .themes import element_text
 from . import discretemappers
 from .utils import format_ticks
+import six
 import os
 
 if os.environ.get("GGPLOT_DEV"):
