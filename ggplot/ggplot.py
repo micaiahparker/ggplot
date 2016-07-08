@@ -268,7 +268,7 @@ class ggplot(object):
 
 
         if xlab:
-            if isinstance(xlab, (str, unicode)):
+            if isinstance(xlab, six.string_types):
                 xlab = element_text(xlab)
 
             # encofrce it to be an x-label
@@ -280,7 +280,7 @@ class ggplot(object):
         else:
             ylab = self._aes.get('y', '')
 
-        if isinstance(ylab, (str, unicode)):
+        if isinstance(ylab, six.string_types):
             ylab = element_text(ylab)
 
         if ylab:
