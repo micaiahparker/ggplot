@@ -147,7 +147,7 @@ class ggplot(object):
         labels = [(self.fig.suptitle, self.title)] #, (plt.xlabel, self.xlab), (plt.ylabel, self.ylab)]
         for mpl_func, label in labels:
             if label:
-                if isinstance(label, (str, unicode)):
+                if isinstance(label, six.string_types):
                     label = element_text(label)
                 label.override(0.5, 0.95)
                 label.apply_to_fig(self.fig)
